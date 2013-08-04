@@ -1,4 +1,5 @@
 #include "TestHarness.h"
+#include "../Parse.h"
 
 
 // include the header file for the class you are testing.
@@ -7,7 +8,12 @@
 
 // replace testName with the name of the particular test. Replace ClassName with
 // the name of the class being tested
-TEST(test,testing)
+
+TEST(ParseTrimAndEat, Parse)
 {
-	CHECK(1==1);
+  std::string stringOne = "Hello here is a string         \n";
+  std::string testString = "Hello here is a string";
+  Parse::trim(stringOne, " \n");
+  CHECK_EQUAL(testString, stringOne);
 }
+
