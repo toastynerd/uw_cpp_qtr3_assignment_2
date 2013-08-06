@@ -18,6 +18,30 @@ namespace Element
   {
     Element::my_attributes.push_back(attribute);
   }
+
+  template<class T>
+  T Element<T>::createElement()
+  {
+    if ( my_description == "Point" )
+    {
+
+    }
+
+    if( my_description == "VectorGraphic")
+    {
+
+    }
+
+    if( my_description == "Scene" )
+    {
+
+    }
+
+    if( my_description == "Layer" )
+    {
+
+    }
+  }
 }
 
 
